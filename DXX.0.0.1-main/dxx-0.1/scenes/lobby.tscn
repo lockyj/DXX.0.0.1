@@ -1,0 +1,298 @@
+[gd_scene format=3 uid="uid://c8n3r2x6r4v5p"]
+
+[ext_resource type="Script" uid="uid://660jwopypkw" path="res://scripts/lobby.gd" id="1_y8q8y"]
+
+[node name="Lobby" type="Control" unique_id=1134149786]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y8q8y")
+
+[node name="Background" type="ColorRect" parent="." unique_id=245192831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.2, 0.25, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1660575796]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "大厅"
+horizontal_alignment = 1
+
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=184743371]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 149.0
+offset_right = 703.0
+offset_bottom = 437.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="SettingsButton" type="Button" parent="." unique_id=1535057522]
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 22.0
+offset_right = 1111.0
+offset_bottom = 53.0
+text = "设置"
+
+[node name="EnterGameButton" type="Button" parent="." unique_id=1369596783]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 472.0
+offset_right = 709.0
+offset_bottom = 610.0
+text = "进入游戏"
+
+[node name="InventoryButton" type="Button" parent="." unique_id=1611572061]
+layout_mode = 0
+offset_left = 908.0
+offset_top = 226.0
+offset_right = 1107.0
+offset_bottom = 362.0
+text = "初始背包"
+
+[node name="CharacterButton" type="Button" parent="." unique_id=725848962]
+layout_mode = 0
+offset_left = 968.0
+offset_top = 112.0
+offset_right = 1109.0
+offset_bottom = 200.0
+text = "初始角色面板"
+
+[node name="CharacterPanel" type="Panel" parent="." unique_id=2093647836]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CharacterPanel" unique_id=1245330383]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "角色信息"
+
+[node name="Stats" type="VBoxContainer" parent="CharacterPanel" unique_id=784713681]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -40.0
+offset_right = 60.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Level" type="Label" parent="CharacterPanel/Stats" unique_id=196030782]
+layout_mode = 2
+text = "等级：1"
+
+[node name="HP" type="Label" parent="CharacterPanel/Stats" unique_id=1847666748]
+layout_mode = 2
+text = "生命值：100"
+
+[node name="ATK" type="Label" parent="CharacterPanel/Stats" unique_id=55657404]
+layout_mode = 2
+text = "攻击力：15"
+
+[node name="CloseButton" type="Button" parent="CharacterPanel" unique_id=1294073714]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "X"
+
+[node name="InventoryPanel" type="Panel" parent="." unique_id=1058781744]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -180.0
+offset_right = 250.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="InventoryPanel" unique_id=1529940489]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "背包"
+
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel" unique_id=2105641440]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -80.0
+offset_right = 150.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="Slot1" type="Panel" parent="InventoryPanel/GridContainer" unique_id=1970435171]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot2" type="Panel" parent="InventoryPanel/GridContainer" unique_id=407761819]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot3" type="Panel" parent="InventoryPanel/GridContainer" unique_id=1335952449]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot4" type="Panel" parent="InventoryPanel/GridContainer" unique_id=1004698087]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot5" type="Panel" parent="InventoryPanel/GridContainer" unique_id=275790720]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot6" type="Panel" parent="InventoryPanel/GridContainer" unique_id=1353895936]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot7" type="Panel" parent="InventoryPanel/GridContainer" unique_id=745912750]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot8" type="Panel" parent="InventoryPanel/GridContainer" unique_id=1177207950]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot9" type="Panel" parent="InventoryPanel/GridContainer" unique_id=320332477]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot10" type="Panel" parent="InventoryPanel/GridContainer" unique_id=463156780]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="InventoryPanel" unique_id=347314325]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 41.0
+grow_horizontal = 0
+text = "X"
+
+[node name="SettingsPanel" type="Panel" parent="." unique_id=1250967959]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SettingsPanel" unique_id=1895586796]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 20.0
+offset_right = 50.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "设置"
+
+[node name="Buttons" type="VBoxContainer" parent="SettingsPanel" unique_id=437238750]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -40.0
+offset_right = 60.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="CloseButton" type="Button" parent="SettingsPanel/Buttons" unique_id=976047329]
+layout_mode = 2
+text = "关闭"
+
+[node name="QuitButton" type="Button" parent="SettingsPanel/Buttons" unique_id=531590061]
+layout_mode = 2
+text = "退出"
+
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="EnterGameButton" to="." method="_on_enter_game_button_pressed"]
+[connection signal="pressed" from="InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="CharacterButton" to="." method="_on_character_button_pressed"]
+[connection signal="pressed" from="CharacterPanel/CloseButton" to="." method="_on_character_close_button_pressed"]
+[connection signal="pressed" from="InventoryPanel/CloseButton" to="." method="_on_inventory_close_button_pressed"]
+[connection signal="pressed" from="SettingsPanel/Buttons/CloseButton" to="." method="_on_settings_close_button_pressed"]
+[connection signal="pressed" from="SettingsPanel/Buttons/QuitButton" to="." method="_on_settings_quit_button_pressed"]
